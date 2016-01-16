@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+###
+# Disable our service
+###
+systemctl stop fvapp-sickbeard
+if [ -f /lib/systemd/system/fvapp-sickbeard.service ]; then
+	systemctl disable fvapp-sickbeard
+fi
+
+###
+# Remove compiled python stuff
+###
+find /apps/sickbeard -name "*.pyc" -print0 | xargs -n1 -0 rm -f
+find /apps/sickbeard -name "*.pyo" -print0 | xargs -n1 -0 rm -f
+
+
