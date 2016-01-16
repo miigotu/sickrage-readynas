@@ -1,5 +1,5 @@
 [General]
-log_dir = /apps/sickbeard/logs
+log_dir = /apps/sickrage/logs
 web_port = 8888
 web_host = 0.0.0.0
 web_ipv6 = 0
@@ -32,9 +32,9 @@ metadata_xbmc = 0|0|0|0|0|0
 metadata_mediabrowser = 0|0|0|0|0|0
 metadata_ps3 = 0|0|0|0|0|0
 metadata_wdtv = 0|0|0|0|0|0
-cache_dir = /apps/sickbeard/cache
-root_dirs = 0|/data/sickbeard/Videos
-tv_download_dir = /data/sickbeard/Videos
+cache_dir = /apps/sickrage/cache
+root_dirs = 0|/data/sickrage/Videos
+tv_download_dir = /data/sickrage/Videos
 keep_processed_dir = 0
 move_associated_files = 0
 process_automatically = 0
@@ -43,7 +43,7 @@ extra_scripts = ""
 git_path = ""
 [Blackhole]
 nzb_dir = ""
-torrent_dir = /data/sickbeard/Blackhole
+torrent_dir = /data/sickrage/Blackhole
 [EZRSS]
 ezrss = 0
 [TVBinz]
