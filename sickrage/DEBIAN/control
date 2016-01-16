@@ -1,18 +1,12 @@
-Package: sickbeard
-Version: 0.498.0.git4e57-0rnx4
+Package: sickrage
+Version: 0.1
 Architecture: all
-Maintainer: ReadyNAS Xtras <xtras@readynasxtras.com>
-Installed-Size: 6392
-Depends: python (>= 2.7), python-cheetah (>= 2.1)
+Maintainer: Dustyn Gibson (miigotu) <miigotu@gmail.com>
+Installed-Size: 34488
+Depends: python (>= 2.7), git-core (>= 1:1.7.10.4)
 Section: contrib/net
 Priority: optional
-Homepage: http://sickbeard.com
-Description: internet PVR for newsgroup users
- Sick Beard is a PVR for newsgroup users (with limited
- torrent support). It watches for new episodes of your
- favorite shows and when they are posted it downloads
- them, sorts and renames them, and optionally generates
- metadata for them. It currently supports NZBs.org,
- NZBMatrix, NZBs'R'Us, Bin-Req.com, Newzbin, NZB.su,
- and EZRSS and retrieves show information from
- theTVDB.com and TVRage.com.
+Homepage: https://sickrage.github.io
+Description: Automatic Video Library Manager for TV Shows.
+ It watches for new episodes of your favorite shows,
+ and when a torrent or nzb is posted it does its magic.
