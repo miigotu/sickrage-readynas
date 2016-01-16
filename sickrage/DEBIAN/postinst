@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for sickbeard
+# postinst script for sickrage
 #
 # see: dh_installdeb(1)
 
@@ -19,45 +19,18 @@ set -e
 
 case "$1" in
     configure)
-	###
-	# Create our Master Share
-	###
-	if [ ! -d /data/sickbeard ]; then
-        	rn_nml -a share:/data/sickbeard
-	fi
-	if [ ! -d /apps/sickbeard/config ]; then
-		mkdir -p /apps/sickbeard/config
-	fi
-	chown -R admin:admin /apps/sickbeard/config/.
-	if [ ! -f /apps/sickbeard/config/config.ini ]; then
-	    cp /apps/sickbeard/config/config.ini.dist /apps/sickbeard/config/config.ini
-	    # Automaticall configure the SABnzbd API KEY
-	    if [ -f /apps/sabnzbd/config/sabnzbd.conf ]; then
-		SABAPI=`grep ^api_key /apps/sabnzbd/config/sabnzbd.conf | awk '{ print $3 }'`
-		SABUSER=`grep ^username /apps/sabnzbd/config/sabnzbd.conf | head -n1 | awk '{ print $3 }'`
-		SABPASS=`grep ^password /apps/sabnzbd/config/sabnzbd.conf | head -n1 | awk '{ print $3 }'`
-	    fi
-	    sed -i "s/SAB_API_KEY/${SABAPI}/" /apps/sickbeard/config/config.ini
-	    sed -i "s/SAB_USER_NAME/${SABUSER}/" /apps/sickbeard/config/config.ini
-	    sed -i "s/SAB_PASSWORD/${SABPASS}/" /apps/sickbeard/config/config.ini
-	fi
-	if [ ! -f /apps/sickbeard/config/sickbeard.db ]; then
-	    touch /apps/sickbeard/config/sickbeard.db
-	    chmod 666 /apps/sickbeard/config/sickbeard.db
-	    chown admin:admin /apps/sickbeard/config/sickbeard.db
-	fi
-	if [ ! -f /apps/sickbeard/config/cache.db ]; then
-	    touch /apps/sickbeard/config/cache.db
-	    chmod 666 /apps/sickbeard/config/cache.db
-	    chown admin:admin /apps/sickbeard/config/cache.db
-	fi
-	# Force create the Blackhole dir
-	mkdir -p /apps/sickbeard/config/logs
-	mkdir -p /apps/sickbeard/config/cache
-	mkdir -p /data/sickbeard/Blackhole
-	chown -R admin:admin /apps/sickbeard/config
-	chmod 777 /apps/sickbeard/config
-	# sed -i 's/.$//g' /usr/share/sickbeard/SickBeard.py
+    # Make sure we give them a base ini, need to use the specified port
+    if [ ! -f /data/sickrage/config/config.ini ]; then
+        cp /data/sickrage/config/config.ini.dist /data/sickrage/config/config.ini
+    fi
+
+    # Chown to admin:admin
+    chown -R admin:admin /apps/sickrage
+    chown -R admin:admin /data/sickrage
+
+    # Create our Config/DB Share
+    rn_nml -a share:/data/sickrage
+
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
@@ -72,9 +45,9 @@ esac
 ###
 # Enable our service
 ###
-if [ -f /lib/systemd/system/fvapp-sickbeard.service ]; then 
-	systemctl enable fvapp-sickbeard
-	systemctl start fvapp-sickbeard
+if [ -f /lib/systemd/system/fvapp-sickrage.service ]; then
+    systemctl enable fvapp-sickrage
+    systemctl start fvapp-sickrage
 fi
 
 ###
