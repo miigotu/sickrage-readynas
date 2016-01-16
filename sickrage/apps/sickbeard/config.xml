@@ -1,13 +1,13 @@
-<Application resource-id="sickbeard"><!-- 'resource-id' must be AppName -->
+<Application resource-id="sickrage"><!-- 'resource-id' must be AppName -->
   <AppID>WHOCARES_GENIEAPP_000099</AppID>
-  <Name>SickBeard</Name><!-- Any desciptive name, upto 48 chars -->
-  <Author>ReadyNAS Xtras</Author><!-- Authors name. upto 48 chars -->
-  <Version>0.498.0.git4e57-0rnx4</Version><!-- Version -->
+  <Name>SickRage</Name><!-- Any desciptive name, upto 48 chars -->
+  <Author>Dustyn Gibson (miigotu)</Author><!-- Authors name. upto 48 chars -->
+  <Version>0.1</Version><!-- Version -->
   <RequireReboot>0</RequireReboot><!-- If non-zero, it indicate reboot is required. -->
   <LaunchURL>http://localhost:8888</LaunchURL><!-- 'localhost' will be replaced by framework JS. -->
   <ConfigURL></ConfigURL>
   <ReservePort>8888</ReservePort>
-  <DebianPackage>sickbeard</DebianPackage>
-  <ServiceName>fvapp-sickbeard.service</ServiceName>
-  <Description lang="en-us">SickBeard: A PVR for newsgroup users</Description>
+  <DebianPackage>sickrage</DebianPackage>
+  <ServiceName>fvapp-sickrage.service</ServiceName>
+  <Description lang="en-us">SickRage: Automatic library manager</Description>
 </Application>

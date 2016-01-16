@@ -1,12 +1,12 @@
 [Unit]
-Description=Service for SickBeard
+Description=Service for SickRage
 After=apache2.service
 
 [Service]
 Type=forking
-ExecStart=/etc/init.d/sickbeard start
-ExecStop=/etc/init.d/sickbeard stop
-PIDFile=/var/run/sickbeard/sickbeard.pid
+ExecStart=/etc/init.d/sickrage start
+ExecStop=/etc/init.d/sickrage stop
+PIDFile=/var/run/sickrage/sickrage.pid
 #KillMode=process
 #Restart=always
 
