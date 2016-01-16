@@ -1,9 +1,9 @@
 Package: sickrage
-Version: 0.1
+Version: 5.1.2
 Architecture: all
 Maintainer: Dustyn Gibson (miigotu) <miigotu@gmail.com>
 Installed-Size: 34488
-Depends: python (>= 2.7), git (>> 1:1.7.0.2)
+Depends: python (>= 2.7)
 Section: contrib/net
 Priority: optional
 Homepage: https://sickrage.github.io
