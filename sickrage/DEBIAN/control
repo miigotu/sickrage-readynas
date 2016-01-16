@@ -3,7 +3,7 @@ Version: 0.1
 Architecture: all
 Maintainer: Dustyn Gibson (miigotu) <miigotu@gmail.com>
 Installed-Size: 34488
-Depends: python (>= 2.7), git-core (>= 1:1.7.10.4)
+Depends: python (>= 2.7), git (>> 1:1.7.0.2)
 Section: contrib/net
 Priority: optional
 Homepage: https://sickrage.github.io

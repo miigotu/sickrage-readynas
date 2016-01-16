@@ -13,17 +13,14 @@ set -e
 # for details, see /usr/share/doc/packaging-manual/
 
 case "$1" in
-	purge)
-		rm -rf /apps/sickbeard
-		## rm -rf /apps/.rnx/sickbeard
-		systemctl restart apache2.service
-		sleep 3
-		;;
-	remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
-		;;
-	*)
-		echo "postrm called with unknown argument \`$1'" >&2
-		exit 0
+    purge)
+        rm -rf /data/sickrage
+        systemctl restart apache2.service
+        sleep 3
+        ;;
+    remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        ;;
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 0
 esac
-
-
