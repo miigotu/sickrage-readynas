@@ -1,27 +1,37 @@
 This work was packaged for Debian by:
 
-    ReadyNAS Xtras <xtras@readynasxtras.com> on Fri, 18 Feb 2011 01:32:35 +0100
+    Dustyn Gibson (miigotu) <miigotu@gmail.com> on Fri, 15 Jan 2016 19:58:35 -0800
 
 It was downloaded from:
 
-    http://github.com/midgetspy/Sick-Beard/tarball/master
+    http://github.com/SickRage/SickRage/tarball/master
 
 Upstream Author(s):
 
-    Nic Wolfe 
-    <likewise for another author>
+    SickRage Team
 
 Copyright:
 
-    <Copyright (C) 2011 Nic Wolfe>
+    Copyright (C) 2016 Dustyn Gibson
 
 License:
 
-    <Put the license of the package here indented by 4 spaces>
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 The Debian packaging is:
 
-    Copyright (C) 2011 ReadyNAS Xtras <xtras@readynasxtras.com>
+    Copyright (C) 2016 Dustyn Gibson (miigotu) <miigotu@gmail.com>
 
 # Please chose a license for your packaging work. If the program you package
 # uses a mainstream license, using the same license is the safest choice.
